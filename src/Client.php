@@ -128,7 +128,7 @@ class Client
         $i = 0;
         $chunksCount = intdiv($fileSize, $chunkSizeBytes) + (($fileSize % $chunkSizeBytes) ? 1 : 0);
         while (!$status && !feof($handle)) {
-            echo "\rUploading... " . (++$i) . '/'.$chunksCount;
+            echo "\rUploading... [{$filePath}] - " . (++$i) . '/'.$chunksCount;
             sleep(self::CHUNK_DELAY);
             $chunk = fread($handle, $chunkSizeBytes);
             $status = $media->nextChunk($chunk);
