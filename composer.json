@@ -1,0 +1,16 @@
+{
+    "name": "cast/youtube",
+    "description": "YouTube client",
+    "type": "library",
+    "keywords": ["youtube"],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "google/apiclient": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cast\\YouTube\\": "src"
+        }
+    }
+}

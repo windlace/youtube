@@ -1,0 +1,8 @@
+### Environment variables:
+
+``` bash
+CAST_YOUTUBE_GOOGLE_OAUTH_CLIENT_ID=<>
+CAST_YOUTUBE_GOOGLE_OAUTH_CLIENT_SECRET=<>
+CAST_YOUTUBE_GOOGLE_OAUTH_REDIRECT_URI=http://localhost/callback.php
+CAST_YOUTUBE_CREDENTIALS_FILE_PATH=/storage/credentials.json
+```
