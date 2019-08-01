@@ -27,6 +27,7 @@ class Client
             'client_secret' => $_ENV['CAST_YOUTUBE_GOOGLE_OAUTH_CLIENT_SECRET'] ?? die('missing env variable CAST_YOUTUBE_GOOGLE_OAUTH_CLIENT_SECRET'),
             'redirect_uri'  => $_ENV['CAST_YOUTUBE_GOOGLE_OAUTH_REDIRECT_URI'] ?? die('missing env variable CAST_YOUTUBE_GOOGLE_OAUTH_REDIRECT_URI'),
         ]);
+        $this->client->setAccessType('offline');
         $this->client->setScopes([\Google_Service_YouTube::YOUTUBE]);
         $this->service = new \Google_Service_YouTube($this->client);
     }
